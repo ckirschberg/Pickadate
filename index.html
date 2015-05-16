@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+    <!-- Install with bower: bower install pickadate -->
+
+    <!-- Depends on jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script> <!-- (84 KB) -->
+
+    <!-- Pickadate - Supports all modern browsers – and IE8+. - http://amsul.ca/pickadate.js/date/ -->
+    <script src="bower_components/pickadate/lib/compressed/picker.js"></script>
+    <script src="bower_components/pickadate/lib/compressed/legacy.js"></script> <!-- IE 8 -->
+    <script src="bower_components/pickadate/lib/compressed/picker.date.js"></script>
+    <link href="bower_components/pickadate/lib/compressed/themes/classic.css" rel="stylesheet" type="text/css" />
+    <link href="bower_components/pickadate/lib/compressed/themes/classic.date.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <input type="text" class="datepicker"/>
+
+</body>
+</html>
+
+
+
+<script type="text/javascript">
+    /* Initialize with the values you want (Danish language here) */
+
+    $('.datepicker').pickadate({
+        min: new Date(2010,0,1),
+        max: new Date(2025,7,14),
+        format: 'dd/mm/yyyy',
+        monthsFull: ['Januar', 'Februar', 'Marts', 'April', 'Maj', 'Juni', 'Juli', 'August', 'September', 'Oktober',
+            'November', 'December'],
+        weekdaysShort: ['Man', 'Tir', 'Ons', 'Tor', 'Fre', 'Lør', 'Søn'],
+        today: 'Idag',
+        clear: 'Slet',
+        close: 'Luk'
+    });
+
+
+</script>
